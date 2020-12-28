@@ -122,20 +122,20 @@ fi
 PS1='\[\e]0;\u: \w\a\]\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ '
 
 export PATH=$HOME/.dotnet:/opt/oryx:/opt/nodejs/lts/bin:/opt/python/latest/bin:/opt/yarn/stable/bin:/home/codespace/.dotnet/tools:$HOME/.npm-global/bin:$PATH
-export NVM_DIR="/home/codespace/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-if [ "$(stat -c '%U' $NVM_DIR)" != "codespace" ]; then
-    sudo chown -R codespace:root $NVM_DIR
-fi
-export NVS_HOME="$HOME/.nvs"
-[ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
-export SDKMAN_DIR=/usr/local/sdkman
-source ${SDKMAN_DIR}/bin/sdkman-init.sh
+# export NVM_DIR="/home/vscode/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+# [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+# if [ "$(stat -c '%U' $NVM_DIR)" != "vscode" ]; then
+#     sudo chown -R vscode:root $NVM_DIR
+# fi
+# export NVS_HOME="$HOME/.nvs"
+# [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
+# export SDKMAN_DIR=/usr/local/sdkman
+# source ${SDKMAN_DIR}/bin/sdkman-init.sh
 export GRADLER_USER_HOME=${HOME}/.gradle
 export M2=$HOME/.m2
 export GOPATH="/go"
 export GOROOT="/usr/local/go"
-export PATH="${GOROOT}/bin:${PATH}"
+export PATH="${GOROOT}/bin:/usr/games:${PATH}"
 source /usr/local/rvm/scripts/rvm
 fortune -a | cowsay -f tux
